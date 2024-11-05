@@ -78,6 +78,7 @@
         android:layout_marginStart="8dp"
         android:text="165.000d"
         android:textSize="12sp"
+        android:textStyle="bold"
         android:textColor="@color/ptit_red"
         app:layout_constraintBottom_toBottomOf="@+id/oldPriceTxt"
         app:layout_constraintStart_toEndOf="@+id/oldPriceTxt"

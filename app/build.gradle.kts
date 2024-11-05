@@ -41,7 +41,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.firebase.database)
     implementation(libs.activity)
+    implementation(libs.constraintlayout)
     testImplementation(libs.junit)
+    implementation(libs.gson)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation(libs.glide)
+    annotationProcessor(libs.glide.compiler)
 }
