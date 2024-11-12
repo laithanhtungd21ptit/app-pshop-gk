@@ -42,8 +42,8 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.Viewhold
         holder.binding.reviewTxt.setText(""+items.get(position).getReview());
         holder.binding.priceTxt.setText(items.get(position).getPrice()+"đ");
         holder.binding.ratingTxt.setText("("+items.get(position).getRating()+")");
-        holder.binding.oldPriceTxt.setText(items.get(position).getOldPrice()+"đ");
-        holder.binding.oldPriceTxt.setPaintFlags(holder.binding.oldPriceTxt.getPaintFlags()| Paint.STRIKE_THRU_TEXT_FLAG);
+//        holder.binding.oldPriceTxt.setText(items.get(position).getOldPrice()+"đ");
+//        holder.binding.oldPriceTxt.setPaintFlags(holder.binding.oldPriceTxt.getPaintFlags()| Paint.STRIKE_THRU_TEXT_FLAG);
         holder.binding.ratingBar.setRating((float) items.get(position).getRating());
 
         RequestOptions requestOptions=new RequestOptions();

@@ -68,7 +68,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/cartView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_margin="4dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -242,9 +243,10 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="bottom"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollViewCart"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="BottomAppBar">
 
         <LinearLayout
             android:layout_width="match_parent"

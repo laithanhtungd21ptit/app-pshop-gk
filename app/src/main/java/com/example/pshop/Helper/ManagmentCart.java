@@ -65,4 +65,11 @@ public class ManagmentCart {
         }
         return fee;
     }
+    public void clearCart() {
+        // Xóa trực tiếp khóa "CartList" trong TinyDB để xóa giỏ hàng
+        tinyDB.remove("CartList");  // Xóa khóa để xóa toàn bộ dữ liệu giỏ hàng
+        Toast.makeText(context, "Your cart has been cleared", Toast.LENGTH_SHORT).show();  // Hiển thị thông báo
+    }
+
+
 }

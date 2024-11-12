@@ -3,6 +3,7 @@ package com.example.pshop.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.content.SharedPreferences;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -33,9 +34,9 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+//        checkLoginStatus();
         initBanner();
-        initCategory();
+//        initCategory();
         initPopular();
         bottomNavigation();
 
@@ -50,6 +51,17 @@ public class MainActivity extends BaseActivity {
         });
     }
 
+//    private void checkLoginStatus() {
+//        SharedPreferences preferences = getSharedPreferences("user_prefs", MODE_PRIVATE);
+//        boolean isLoggedIn = preferences.getBoolean("isLoggedIn", false);
+//
+//        if (!isLoggedIn) {
+//            // Nếu chưa đăng nhập, chuyển đến LoginActivity
+//            Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+//            startActivity(loginIntent);
+//            finish();  // Đảm bảo không quay lại MainActivity khi quay lại
+//        }
+//    }
     private void bottomNavigation() {
         // Nút giỏ hàng
         binding.cartBtn.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, CartActivity.class)));
@@ -84,31 +96,6 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    private void initCategory() {
-        DatabaseReference myref = database.getReference("Category");
-        binding.progressBarOffical.setVisibility(View.VISIBLE);
-        ArrayList<CategoryDomain> items = new ArrayList<>();
-        myref.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) {
-                    for (DataSnapshot issue : snapshot.getChildren()) {
-                        items.add(issue.getValue(CategoryDomain.class));
-                    }
-                    if (!items.isEmpty()) {
-                        binding.recyclerViewOffical.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false));
-                        binding.recyclerViewOffical.setAdapter(new CategoryAdapter(items));
-                    }
-                    binding.progressBarOffical.setVisibility(View.GONE);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
 
     private void initBanner() {
         DatabaseReference myRef = database.getReference("Banner");

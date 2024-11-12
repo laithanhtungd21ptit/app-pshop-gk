@@ -30,8 +30,8 @@ public class ProfileActivity extends BaseActivity {
 
         // Xử lý sự kiện đăng xuất
         binding.buttonLogout.setOnClickListener(view -> {
-            // Xử lý đăng xuất (nếu cần)
-            finish(); // Hoặc chuyển hướng đến màn hình đăng nhập
+            Intent intent = new Intent(ProfileActivity.this, LoginActivity.class); // Chuyển đến trang chủ
+            startActivity(intent);
         });
 
         // Xử lý sự kiện nhấn nút Trang chủ

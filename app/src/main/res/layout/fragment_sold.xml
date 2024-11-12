@@ -2,15 +2,31 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    android:layout_height="match_parent">
 
+    <!-- Tiêu đề bảng -->
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Hướng dẫn chọn size quần áo"
+        android:textSize="18sp"
         android:layout_marginTop="24dp"
-        android:text="put any "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Bảng size quần áo -->
+    <TextView
+        android:id="@+id/size_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size  Vòng ngực (cm)  Vòng eo (cm)  Vòng hông (cm)  Chiều cao (cm)  Cân nặng (kg)\n\nS     80-85         60-65         85-90          150-160         45-55\nM     86-95         66-75         91-100         155-165         55-65\nL     96-105        76-85         101-110        160-170         65-75\nXL    106-115       86-95         111-120        165-175         75-85\nXXL   116-125       96-105        121-130        170-180         85-95"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -55,6 +55,17 @@ public class CartActivity extends BaseActivity {
             Intent intent = new Intent(CartActivity.this, MainActivity.class);
             startActivity(intent);
         });
+
+        // Button thanh toán
+        binding.paymentBtn.setOnClickListener(view -> {
+            // Lấy giá trị totalTxt từ binding
+            String totalAmount = binding.totalTxt.getText().toString().replace("đ", "").trim();
+
+            // Chuyển sang màn hình thanh toán và truyền giá trị totalAmount
+            Intent intent = new Intent(CartActivity.this, PaymentActivity.class);
+            intent.putExtra("totalAmount", totalAmount);  // Truyền giá trị vào Intent
+            startActivity(intent);
+        });
     }
 
     private void calculatorCart() {
@@ -70,4 +81,6 @@ public class CartActivity extends BaseActivity {
         binding.deliveryTxt.setText(delivery + "đ");
         binding.totalTxt.setText(total + "đ");
     }
+
+
 }

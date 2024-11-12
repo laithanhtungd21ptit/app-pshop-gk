@@ -100,9 +100,9 @@ private Handler slideHande = new Handler(Looper.getMainLooper());
         tab2.setArguments(bundle2);
         tab3.setArguments(bundle3);
 
-        adapter.addFrag(tab1,"Descriptions");
-        adapter.addFrag(tab2,"Reviews");
-        adapter.addFrag(tab3,"Sold");
+        adapter.addFrag(tab1,"Mô tả");
+        adapter.addFrag(tab2,"Nhận xét");
+        adapter.addFrag(tab3,"Bảng size");
 
         binding.viewpager.setAdapter(adapter);
         binding.tabLayout.setupWithViewPager(binding.viewpager);

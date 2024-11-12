@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -16,7 +17,7 @@
             android:exported="false"/>
 
         <activity
-            android:name=".Activity.FavoriteActivity"
+            android:name=".Activity.PaymentActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.CartActivity"
@@ -33,6 +34,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity.LoginActivity"
+            android:exported="false">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <service android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.paypal.android.sdk.payments.PayPalService" />
+            </intent-filter>
+        </service>
+
+
     </application>
 
 </manifest>
