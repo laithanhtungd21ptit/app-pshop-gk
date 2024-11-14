@@ -11,6 +11,7 @@ activity = "1.9.3"
 retrofit = "2.9.0"
 gson_converter = "2.9.0"
 constraintlayout = "2.1.4"
+firebaseAuth = "23.1.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -26,6 +27,7 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 gson_converter = { module = "com.squareup.retrofit2:converter-gson", version.ref = "gson_converter" }
 glide_compiler = { group = "com.github.bumptech.glide", name = "compiler", version = "4.15.1" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 
 
 [plugins]

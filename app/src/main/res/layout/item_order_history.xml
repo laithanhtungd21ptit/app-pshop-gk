@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/grey_background"
+    android:layout_margin="16dp">
+
+    <!-- Order ID -->
+    <TextView
+        android:id="@+id/orderIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mã đơn hàng"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:paddingBottom="8dp" />
+
+    <!-- Order Status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trạng thái đơn hàng:"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/orderStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đang xử lý"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Order Total -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng số tiền:"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/orderTotalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123,000 VND"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Product Count -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số lượng sản phẩm:"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/orderProductCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</LinearLayout>

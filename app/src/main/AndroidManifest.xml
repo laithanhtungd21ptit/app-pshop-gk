@@ -17,8 +17,20 @@
             android:exported="false"/>
 
         <activity
-            android:name=".Activity.PaymentActivity"
+            android:name=".Activity.OrderSuccessActivity"
             android:exported="false" />
+        <activity
+            android:name=".Activity.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OrderHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.EditProfileActivity"
+            android:exported="false" />
+        <activity android:name=".Activity.RegisterActivity"
+            android:exported="false"/>
+
         <activity
             android:name=".Activity.CartActivity"
             android:exported="false" />
@@ -43,11 +55,10 @@
         </activity>
         <service android:name="com.paypal.android.sdk.payments.PayPalService"
             android:exported="false">
-            <intent-filter>
-                <action android:name="com.paypal.android.sdk.payments.PayPalService" />
-            </intent-filter>
-        </service>
 
+        </service>
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity"
+            android:exported="false"/>
 
     </application>
 

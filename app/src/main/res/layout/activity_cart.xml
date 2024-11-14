@@ -224,17 +224,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:background="@drawable/green_button_bg"
-                android:text="Thanh Toán"
+                android:text="Đặt Hàng"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
-            <!-- ImageView cho mã QR Code -->
-            <ImageView
-                android:id="@+id/qrCodeImageView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:visibility="gone" /> <!-- Mặc định ẩn mã QR Code -->
         </LinearLayout>
 
     </ScrollView>
