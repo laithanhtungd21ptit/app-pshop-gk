@@ -20,6 +20,9 @@
             android:name=".Activity.OrderSuccessActivity"
             android:exported="false" />
         <activity
+            android:name=".Activity.AdminActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.ChangePasswordActivity"
             android:exported="false" />
         <activity
